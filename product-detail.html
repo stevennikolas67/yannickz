@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Product Details - View and purchase premium gadgets at Ecommerce Gadget Store">
+    <title>Product Details - Ecommerce Gadget Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><span>Nickz</span>Gadget</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 2H4L5.6 14.4C5.8 15.6 6.9 16.4 8.1 16.4H16.4C17.6 16.4 18.7 15.6 18.9 14.4L19.4 5.9" 
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="8" cy="18" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="18" r="1" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="sun-icon">
+                        <circle cx="10" cy="10" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 1V2M10 18V19M1 10H2M18 10H19M3.64 3.64L4.24 4.24M15.76 15.76L16.36 16.36M3.64 16.36L4.24 15.76M15.76 4.24L16.36 3.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="moon-icon" style="display: none;">
+                        <path d="M19 10.13A9 9 0 1 0 9.67 19.9c4.6.37 8.55-3.3 8.75-7.88.07-1.41-.16-2.79-.62-4.12.58 1.37.9 2.89.9 4.47A8.86 8.86 0 0 1 19 10.13z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container page-content">
+        <div style="margin-bottom: 30px;">
+            <a href="products.html" class="back-link">← Back to Products</a>
+        </div>
+
+        <div class="product-detail-container" id="product-detail-container">
+            <!-- Left: Product Image -->
+            <div class="product-detail-image">
+                <img id="product-image" src="assets/images/product1.jpg" alt="Product Image">
+            </div>
+
+            <!-- Right: Product Details -->
+            <div class="product-detail-info">
+                <p class="product-category" id="product-category">Electronics</p>
+                <h1 id="product-title">Watch with different colors</h1>
+                <div class="product-rating" id="product-rating">★★★★★ (128 reviews)</div>
+
+                <div class="price-section">
+                    <span class="old-price" id="old-price">₱27,500</span>
+                    <span class="current-price" id="current-price">₱24,750</span>
+                </div>
+
+                <div class="description-section" id="product-description">
+                    <p>Experience premium technology with this innovative gadget. Designed with precision and quality, it delivers exceptional performance and style.</p>
+                </div>
+
+                <div class="buy-section" id="buy-section">
+                    <p id="product-stock-status"><strong>✓ In Stock</strong> - Available for immediate delivery</p>
+                    <p>🚚 Free shipping on orders over ₱5,500</p>
+                    <p>🔄 30-day money-back guarantee</p>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity">Quantity:</label>
+                    <button class="qty-btn" id="qty-minus">−</button>
+                    <input type="number" id="quantity" value="1" min="1" max="99">
+                    <button class="qty-btn" id="qty-plus">+</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary add-to-cart-btn" id="add-to-cart-btn">Add to Cart</button>
+                    <button class="btn wishlist-btn">♡ Wishlist</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specifications Section -->
+        <div class="specifications">
+            <h2>Product Specifications</h2>
+            
+            <div class="spec-item">
+                <div class="spec-label">Model Name</div>
+                <div class="spec-value" id="spec-model">Premium Watch Pro</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Brand</div>
+                <div class="spec-value" id="spec-brand">TechBrand</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Color</div>
+                <div class="spec-value" id="spec-color">Multiple Colors Available</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Display Size</div>
+                <div class="spec-value" id="spec-display">1.4 inches AMOLED</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Battery Life</div>
+                <div class="spec-value" id="spec-battery">Up to 7 days</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Water Resistance</div>
+                <div class="spec-value" id="spec-water">5ATM (50m)</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Connectivity</div>
+                <div class="spec-value" id="spec-connectivity">Bluetooth 5.0, Wi-Fi</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Compatibility</div>
+                <div class="spec-value" id="spec-compatibility">iOS & Android</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Warranty</div>
+                <div class="spec-value" id="spec-warranty">2 Years Manufacturing Warranty</div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-label">Shipping Weight</div>
+                <div class="spec-value" id="spec-weight">200g</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">About Store</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ecommerce Gadget Store. All rights reserved. | Design by WP Radiant</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/product-detail.js"></script>
+</body>
+</html>

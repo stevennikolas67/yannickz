@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Shopping Cart - Review your items before checkout at Ecommerce Gadget Store">
+    <title>Shopping Cart - Ecommerce Gadget Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><span>Nickz</span>Gadget</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 2H4L5.6 14.4C5.8 15.6 6.9 16.4 8.1 16.4H16.4C17.6 16.4 18.7 15.6 18.9 14.4L19.4 5.9" 
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="8" cy="18" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="18" r="1" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="sun-icon">
+                        <circle cx="10" cy="10" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 1V2M10 18V19M1 10H2M18 10H19M3.64 3.64L4.24 4.24M15.76 15.76L16.36 16.36M3.64 16.36L4.24 15.76M15.76 4.24L16.36 3.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="moon-icon" style="display: none;">
+                        <path d="M19 10.13A9 9 0 1 0 9.67 19.9c4.6.37 8.55-3.3 8.75-7.88.07-1.41-.16-2.79-.62-4.12.58 1.37.9 2.89.9 4.47A8.86 8.86 0 0 1 19 10.13z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <p>Review your items before checkout</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <div class="container page-content">
+        <div class="cart-layout">
+            <!-- Cart Items -->
+            <main class="cart-main">
+                <div class="cart-items-section">
+                    <h2>Order Summary</h2>
+                    <div id="cart-items-container">
+                        <!-- Cart items will be loaded here dynamically from localStorage -->
+                    </div>
+                </div>
+
+                <div class="continue-shopping">
+                    <a href="products.html" class="btn btn-secondary">← Continue Shopping</a>
+                </div>
+            </main>
+
+            <!-- Cart Summary -->
+            <aside class="cart-summary">
+                <div class="summary-box">
+                    <h2>Cart Summary</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">₱0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">₱550.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax:</span>
+                        <span id="tax">₱0.00</span>
+                    </div>
+                    <div class="promo-code">
+                        <input type="text" placeholder="Enter promo code">
+                        <button class="btn btn-small apply-promo-btn">Apply</button>
+                    </div>
+                    
+                    <div class="summary-total">
+                        <span>Total:</span>
+                        <span id="total">₱550.00</span>
+                    </div>
+
+                    <button class="btn btn-primary checkout-btn" style="width: 100%; margin-top: 20px;">Proceed to Checkout</button>
+                    <button class="btn btn-secondary save-later-btn" style="width: 100%; margin-top: 10px;">Save for Later</button>
+                </div>
+
+                <div class="security-info">
+                    <p><strong>🔒 Secure Checkout</strong></p>
+                    <p>Your payment information is safe and secure. We use industry-standard encryption.</p>
+                </div>
+
+                <div class="delivery-info">
+                    <h3>Delivery Information</h3>
+                    <form id="shipping-form">
+                        <label for="shipping">Shipping Method:</label>
+                        <select id="shipping-method">
+                            <option value="550">Standard Shipping (5-7 days) - ₱550.00</option>
+                            <option value="1375">Express Shipping (2-3 days) - ₱1,375.00</option>
+                            <option value="2750">Overnight Shipping - ₱2,750.00</option>
+                        </select>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">About Store</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-content">
+            <button class="checkout-modal-close" id="closeCheckoutModal">&times;</button>
+            
+            <!-- Checkout Form -->
+            <div id="checkoutForm" class="checkout-form">
+                <h2>Checkout</h2>
+                <form id="checkoutFormElement">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                        <span class="error-message" id="addressError"></span>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method *</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">-- Select Payment Method --</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="debit-card">Debit Card</option>
+                            <option value="gcash">GCash</option>
+                            <option value="cod">Cash on Delivery</option>
+                        </select>
+                        <span class="error-message" id="paymentError"></span>
+                    </div>
+
+                    <!-- Credit Card Fields (hidden by default) -->
+                    <div id="creditCardFields" class="credit-card-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="cardName">Cardholder Name *</label>
+                            <input type="text" id="cardName" name="cardName">
+                            <span class="error-message" id="cardNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number *</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                            <span class="error-message" id="cardNumberError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Expiry Date (MM/YY) *</label>
+                                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY" maxlength="5">
+                                <span class="error-message" id="cardExpiryError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cardCVV">CVV *</label>
+                                <input type="text" id="cardCVV" name="cardCVV" placeholder="123" maxlength="3">
+                                <span class="error-message" id="cardCVVError"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Complete Order</button>
+                </form>
+            </div>
+
+            <!-- Order Confirmation -->
+            <div id="orderConfirmation" class="order-confirmation" style="display: none;">
+                <div class="confirmation-icon">✓</div>
+                <h2>Order Confirmed!</h2>
+                
+                <div class="order-details">
+                    <div class="detail-section">
+                        <h3>Order Summary</h3>
+                        <div id="confirmationOrderItems"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Customer Information</h3>
+                        <p><strong>Name:</strong> <span id="confirmName"></span></p>
+                        <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+                        <p><strong>Phone:</strong> <span id="confirmPhone"></span></p>
+                        <p><strong>Address:</strong> <span id="confirmAddress"></span></p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Payment Information</h3>
+                        <p><strong>Payment Method:</strong> <span id="confirmPayment"></span></p>
+                        <p><strong>Order Total:</strong> <span id="confirmTotal" style="font-size: 1.3em; color: var(--primary); font-weight: bold;"></span></p>
+                    </div>
+
+                    <div class="detail-section">
+                        <p><strong>Order Number:</strong> <span id="orderNumber"></span></p>
+                        <p><small>A confirmation email has been sent to your email address.</small></p>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="location.href='products.html'">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>

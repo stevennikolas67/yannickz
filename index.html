@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Ecommerce Gadget Store - Premium tech gadgets and electronics. Shop the latest smartphones, laptops, smartwatches, and more.">
+    <meta name="keywords" content="gadgets, electronics, smartphones, laptops, tech store">
+    <title>Ecommerce Gadget Store - Premium Tech Gadgets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><span>Nickz</span>Gadget</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#products" class="nav-link">Products</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 2H4L5.6 14.4C5.8 15.6 6.9 16.4 8.1 16.4H16.4C17.6 16.4 18.7 15.6 18.9 14.4L19.4 5.9" 
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="8" cy="18" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="18" r="1" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="sun-icon">
+                        <circle cx="10" cy="10" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 1V2M10 18V19M1 10H2M18 10H19M3.64 3.64L4.24 4.24M15.76 15.76L16.36 16.36M3.64 16.36L4.24 15.76M15.76 4.24L16.36 3.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="moon-icon" style="display: none;">
+                        <path d="M19 10.13A9 9 0 1 0 9.67 19.9c4.6.37 8.55-3.3 8.75-7.88.07-1.41-.16-2.79-.62-4.12.58 1.37.9 2.89.9 4.47A8.86 8.86 0 0 1 19 10.13z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="home" class="banner-section">
+        <div class="banner-container">
+            <div class="banner-content">
+                <p class="banner-subtitle">Unbeatable Deals on</p>
+                <h2 class="banner-title" id="banner-product-name">Trendy Products</h2>
+                <p class="banner-description" id="banner-product-desc">Find the perfect products at unbeatable prices, handpicked just for you. Get exclusive deals on the latest gadgets and tech innovations.</p>
+                <div class="banner-price-action">
+                    <span class="banner-price">₱<span id="banner-product-price">137,945</span></span>
+                    <a href="#products" class="btn btn-primary">Explore More</a>
+                </div>
+            </div>
+            <div class="banner-image">
+                <div class="banner-product-image" id="banner-carousel">
+                    <img id="banner-img" src="assets/images/MacBook Pro 16-inch M4.png" alt="Product">
+                </div>
+                <div class="carousel-dots" id="carousel-dots"></div>
+                <button class="carousel-btn prev" id="carousel-prev">❮</button>
+                <button class="carousel-btn next" id="carousel-next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span>Products</span></h2>
+                <p>Discover our latest collection of premium gadgets</p>
+            </div>
+            <div class="products-grid" id="featured-products-grid">
+                <!-- Featured products will be loaded here dynamically from products-data.js -->
+            </div>
+            <div class="view-all-btn-container">
+                <a href="products.html" class="btn btn-secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Store</h2>
+                    <p>Welcome to Ecommerce Gadget Store, your ultimate destination for premium tech gadgets and innovative electronic devices. With over a decade of experience in the tech industry, we pride ourselves on offering only the highest quality products from trusted brands worldwide.</p>
+                    <p>Our mission is to make cutting-edge technology accessible to everyone. Whether you're looking for the latest smartwatch, high-quality headphones, or innovative home devices, we have everything you need to stay ahead of the curve.</p>
+                    <ul class="about-features">
+                        <li>✓ Authentic Products Only</li>
+                        <li>✓ Fast & Free Shipping</li>
+                        <li>✓ 30-Day Money Back Guarantee</li>
+                        <li>✓ 24/7 Customer Support</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <svg width="300" height="300" viewBox="0 0 300 300" fill="none">
+                            <rect x="30" y="30" width="240" height="240" rx="20" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <circle cx="150" cy="100" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M100 160 L200 160 L200 220 L100 220 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="130" cy="190" r="5" fill="currentColor"/>
+                            <circle cx="170" cy="190" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer <span>Testimonials</span></h2>
+                <p>What our satisfied customers have to say</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Amazing selection of gadgets and excellent customer service! The products arrived on time and were exactly as described. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <h4>Sarah Anderson</h4>
+                                <p>Tech Enthusiast</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Best prices for premium gadgets I've found online. Fast shipping and great packaging. Will definitely shop here again!"</p>
+                            <div class="testimonial-author">
+                                <h4>Michael Chen</h4>
+                                <p>Professional Photographer</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Outstanding quality and fantastic support team. They helped me find exactly what I needed within minutes. Top-notch service!"</p>
+                            <div class="testimonial-author">
+                                <h4>Emma Wilson</h4>
+                                <p>Startup Founder</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial-card">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"I've been a customer for years and never been disappointed. Authentic products, competitive prices, and reliable delivery every time."</p>
+                            <div class="testimonial-author">
+                                <h4>James Rodriguez</h4>
+                                <p>Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev testimonial-button-prev"></div>
+                    <div class="swiper-button-next testimonial-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <p>Find answers to common questions about our products and services</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the warranty period for your products?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most of our products come with a manufacturer's warranty of 1 year. Some premium items may have extended warranties. Please check the product details for specific warranty information.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer international shipping?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to over 150 countries worldwide. Shipping costs and delivery times vary depending on your location. You can calculate shipping costs during checkout.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your return policy?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day money-back guarantee on all products. If you're not satisfied, simply return the item in its original condition for a full refund or exchange.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How can I track my order?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Once your order is shipped, you'll receive a tracking number via email. You can use this number to track your package in real-time on our website or the carrier's website.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are your products authentic?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We only sell authentic products directly from authorized manufacturers and authorized distributors. We guarantee the authenticity of every product we sell.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers. All payments are secured with SSL encryption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals and the latest gadget updates delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">About Store</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="assets/js/products-data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

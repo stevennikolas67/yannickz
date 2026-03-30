@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Browse our complete collection of premium gadgets - Laptops, Smartphones, Tablets, Smartwatches, and more at Ecommerce Gadget Store">
+    <title>Products - Ecommerce Gadget Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><span>Nickz</span>Gadget</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M2 2H4L5.6 14.4C5.8 15.6 6.9 16.4 8.1 16.4H16.4C17.6 16.4 18.7 15.6 18.9 14.4L19.4 5.9" 
+                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="8" cy="18" r="1" fill="currentColor"/>
+                        <circle cx="15" cy="18" r="1" fill="currentColor"/>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="sun-icon">
+                        <circle cx="10" cy="10" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 1V2M10 18V19M1 10H2M18 10H19M3.64 3.64L4.24 4.24M15.76 15.76L16.36 16.36M3.64 16.36L4.24 15.76M15.76 4.24L16.36 3.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="moon-icon" style="display: none;">
+                        <path d="M19 10.13A9 9 0 1 0 9.67 19.9c4.6.37 8.55-3.3 8.75-7.88.07-1.41-.16-2.79-.62-4.12.58 1.37.9 2.89.9 4.47A8.86 8.86 0 0 1 19 10.13z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Browse our complete collection of premium gadgets</p>
+        </div>
+    </section>
+
+    <!-- Products Content -->
+    <div class="container page-content">
+        <div class="products-layout">
+            <!-- Sidebar Filter -->
+            <aside class="products-sidebar">
+                <div class="filter-widget">
+                    <h3>Categories</h3>
+                    <ul class="category-filter" id="category-filter-list">
+                        <!-- Categories will be loaded dynamically from products-data.js -->
+                    </ul>
+                </div>
+
+                <div class="filter-widget">
+                    <h3>Price Range</h3>
+                    <input type="range" min="0" max="200000" value="100000" step="5000" class="price-range" id="price-range">
+                    <div class="price-range-values">
+                        <span>₱0</span>
+                        <span id="price-range-value">₱100,000</span>
+                        <span>₱200,000</span>
+                    </div>
+                </div>
+
+                <div class="filter-widget">
+                    <h3>Rating</h3>
+                    <ul class="rating-filter">
+                        <li><label><input type="checkbox" class="rating-checkbox" data-rating="5"> ★★★★★ (5 stars)</label></li>
+                        <li><label><input type="checkbox" class="rating-checkbox" data-rating="4"> ★★★★☆ (4 stars)</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-widget">
+                    <h3>Availability</h3>
+                    <ul class="availability-filter">
+                        <li><label><input type="checkbox" class="availability-checkbox" data-availability="in-stock" checked> In Stock</label></li>
+                        <li><label><input type="checkbox" class="availability-checkbox" data-availability="out-of-stock"> Out of Stock</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="btn btn-secondary reset-filters-btn" style="width: 100%; margin-top: 0;">Reset All</button>
+                </div>
+            </aside>
+
+            <!-- Main Products -->
+            <main class="products-main">
+                <div class="products-toolbar">
+                    <p id="product-count-display">Showing 1-12 of 48 products</p>
+                    <select class="sort-select" id="sort-select">
+                        <option value="featured">Sort by: Featured</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Best Rating</option>
+                    </select>
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be generated by JavaScript -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">About Store</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/products.js"></script>
+</body>
+</html>
